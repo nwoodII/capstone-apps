@@ -13,4 +13,8 @@ spec:
     awsXrayKubernetes:
       repoURL: https://github.com/aws-samples/aws-xray-kubernetes.git
       targetRevision: HEAD
-      path: demo-app          
+      path: demo-app       
+    eksBlueprintsWorkloads:
+      repoURL: https://github.com/nwoodII/eks-blueprints-workloads.git
+      targetRevision: HEAD
+      path: envs/dev    

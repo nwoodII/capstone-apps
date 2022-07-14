@@ -1,0 +1,11 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: eks-blueprints-workloads
+  namespace: argocd
+spec:
+  destinations:
+  - namespace: eks-blueprints-workloads
+    server: https://kubernetes.default.svc
+  sourceRepos:
+  - git@github.com:nwoodII/eks-blueprints-workloads.git

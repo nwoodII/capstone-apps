@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: eks-blueprints-workloads
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: eks-blueprints-workloads
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.eksBlueprintsWorkloads.repoURL }}
+    targetRevision: {{ .Values.spec.apps.eksBlueprintsWorkloads.targetRevision }}
+    path: {{ .Values.spec.apps.eksBlueprintsWorkloads.path }}
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

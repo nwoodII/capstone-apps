@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: team-burnham
+    namespace: prod
     server: {{ .Values.spec.destination.server }}
   source:
     repoURL: {{ .Values.spec.apps.awsAppMeshExamplesTwo.repoURL }}

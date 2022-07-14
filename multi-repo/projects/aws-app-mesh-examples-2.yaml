@@ -5,7 +5,7 @@ metadata:
   namespace: argocd
 spec:
   destinations:
-  - namespace: team-burnham
+  - namespace: prod
     server: https://kubernetes.default.svc
   sourceRepos:
   - git@github.com:aws/aws-app-mesh-examples.git

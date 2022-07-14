@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: awsAppMeshExamples2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: prod
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.awsAppMeshExamples2.repoURL }}
+    targetRevision: {{ .Values.spec.apps.awsAppMeshExamples2.targetRevision }}
+    path: {{ .Values.spec.apps.awsAppMeshExamples2.path }}
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

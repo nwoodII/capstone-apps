@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: aws-app-mesh-examples
+  name: prod
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io

@@ -13,20 +13,4 @@ spec:
     awsXrayKubernetes:
       repoURL: https://github.com/aws-samples/aws-xray-kubernetes.git
       targetRevision: HEAD
-      path: demo-app       
-    eksBlueprintsWorkloads:
-      repoURL: https://github.com/nwoodII/eks-blueprints-workloads.git
-      targetRevision: HEAD
-      path: envs/dev    
-    ecsdemoFrontend:
-      repoURL: git@github.com:aws-containers/ecsdemo-frontend.git
-      targetRevision: main
-      path: kubernetes/helm/ecsdemo-frontend
-    ecsdemoNodejs:
-      repoURL: git@github.com:aws-containers/ecsdemo-nodejs.git
-      targetRevision: main
-      path: kubernetes/helm/ecsdemo-nodejs
-    ecsdemoCrystal:
-      repoURL: git@github.com:aws-containers/ecsdemo-crystal.git
-      targetRevision: main
-      path: kubernetes/helm/ecsdemo-crystal      
+      path: demo-app

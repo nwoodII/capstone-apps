@@ -8,4 +8,4 @@ spec:
   - namespace: prod
     server: https://kubernetes.default.svc
   sourceRepos:
-  - ggit@github.com:aws/aws-app-mesh-examples.git
+  - git@github.com:aws/aws-app-mesh-examples.git

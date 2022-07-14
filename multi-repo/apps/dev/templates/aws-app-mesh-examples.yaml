@@ -11,9 +11,9 @@ spec:
     namespace: aws-app-mesh-examples
     server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: {{ .Values.spec.apps.meshExamples.repoURL }}
-    targetRevision: {{ .Values.spec.apps.meshExamples.targetRevision }}
-    path: {{ .Values.spec.apps.meshExamples.path }}
+    repoURL: {{ .Values.spec.apps.awsAppMeshExamples.repoURL }}
+    targetRevision: {{ .Values.spec.apps.awsAppMeshExamples.targetRevision }}
+    path: {{ .Values.spec.apps.awsAppMeshExamples.path }}
   syncPolicy:
     automated:
       prune: true

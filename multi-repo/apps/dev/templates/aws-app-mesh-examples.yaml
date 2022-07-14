@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: dj
+  name: aws-app-mesh-examples
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   destination:
-    namespace: dj
+    namespace: aws-app-mesh-examples
     server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: {{ .Values.spec.apps.dj.repoURL }}
-    targetRevision: {{ .Values.spec.apps.dj.targetRevision }}
-    path: {{ .Values.spec.apps.dj.path }}
+    repoURL: {{ .Values.spec.apps.meshExamples.repoURL }}
+    targetRevision: {{ .Values.spec.apps.meshExamples.targetRevision }}
+    path: {{ .Values.spec.apps.meshExamples.path }}
   syncPolicy:
     automated:
       prune: true

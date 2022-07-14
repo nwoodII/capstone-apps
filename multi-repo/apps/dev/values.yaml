@@ -3,6 +3,6 @@ spec:
     server: https://kubernetes.default.svc
   apps:
     blueGreen:
-      repoURL: git@github.com:nwoodII/argocd-example-apps.git
-      targetRevision: master
+      repoURL: https://github.com/nwoodII/argocd-example-apps.git
+      targetRevision: HEAD
       path: blue-green 

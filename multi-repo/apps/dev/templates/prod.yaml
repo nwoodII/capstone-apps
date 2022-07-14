@@ -11,9 +11,9 @@ spec:
     namespace: prod
     server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: {{ .Values.spec.apps.djApp.repoURL }}
-    targetRevision: {{ .Values.spec.apps.djApp.targetRevision }}
-    path: {{ .Values.spec.apps.djApp.path }}
+    repoURL: {{ .Values.spec.apps.dj.repoURL }}
+    targetRevision: {{ .Values.spec.apps.dj.targetRevision }}
+    path: {{ .Values.spec.apps.dj.path }}
   syncPolicy:
     automated:
       prune: true

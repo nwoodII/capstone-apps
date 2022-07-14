@@ -6,3 +6,7 @@ spec:
       repoURL: https://github.com/nwoodII/argocd-example-apps.git
       targetRevision: HEAD
       path: blue-green 
+    apps:
+      repoURL: https://github.com/nwoodII/argocd-example-apps.git
+      targetRevision: HEAD
+      path: apps    

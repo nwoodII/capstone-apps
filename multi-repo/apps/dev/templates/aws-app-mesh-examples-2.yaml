@@ -11,9 +11,9 @@ spec:
     namespace: prod
     server: {{ .Values.spec.destination.server }}
   source:
-    repoURL: {{ .Values.spec.apps.awsAppMeshExamples2.repoURL }}
-    targetRevision: {{ .Values.spec.apps.awsAppMeshExamples2.targetRevision }}
-    path: {{ .Values.spec.apps.awsAppMeshExamples2.path }}
+    repoURL: {{ .Values.spec.apps.awsAppMeshExamplesTwo.repoURL }}
+    targetRevision: {{ .Values.spec.apps.awsAppMeshExamplesTwo.targetRevision }}
+    path: {{ .Values.spec.apps.awsAppMeshExamplesTwo.path }}
   syncPolicy:
     automated:
       prune: true

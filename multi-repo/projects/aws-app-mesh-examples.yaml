@@ -8,4 +8,4 @@ spec:
   - namespace: team-burnham
     server: https://kubernetes.default.svc
   sourceRepos:
-  - git@github.com:aws/aws-app-mesh-examples.git
+  - git@github.com:nwoodII/aws-app-mesh-examples.git

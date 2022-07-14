@@ -17,7 +17,7 @@ spec:
     eksBlueprintsWorkloads:
       repoURL: https://github.com/nwoodII/eks-blueprints-workloads.git
       targetRevision: HEAD
-      path: demo-app  
+      path: env/dev  
     awsAppMeshExamples:
       repoURL: https://github.com/aws/aws-app-mesh-examples.git
       targetRevision: HEAD

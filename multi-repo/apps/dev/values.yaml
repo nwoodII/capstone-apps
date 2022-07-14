@@ -5,4 +5,4 @@ spec:
     blueGreen:
       repoURL: git@github.com:nwoodII/argocd-example-apps.git
       targetRevision: main
-      path: blue-green     
+      path: multi-repo/apps/dev   

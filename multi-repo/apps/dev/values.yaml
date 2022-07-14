@@ -10,3 +10,7 @@ spec:
       repoURL: https://github.com/nwoodII/argocd-example-apps.git
       targetRevision: HEAD
       path: apps    
+    awsXrayKubernetes:
+      repoURL: https://github.com/aws-samples/aws-xray-kubernetes.git
+      targetRevision: HEAD
+      path: demo-app          

@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aws-xray-kubernetes
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: aws-xray-kubernetes
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.awsXrayKubernetes.repoURL }}
+    targetRevision: {{ .Values.spec.apps.awsXrayKubernetes.targetRevision }}
+    path: {{ .Values.spec.apps.awsXrayKubernetes.path }}
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

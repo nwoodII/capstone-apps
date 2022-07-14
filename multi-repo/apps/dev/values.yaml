@@ -21,4 +21,4 @@ spec:
     awsAppMeshExamples:
       repoURL: https://github.com/aws/aws-app-mesh-examples.git
       targetRevision: HEAD
-      path: examples/apps/djapp        
+      path: examples/apps/djapp/1_base_application        

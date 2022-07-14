@@ -6,7 +6,7 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
-  project: blue-green
+  project: default
   destination:
     namespace: blue-green
     server: {{ .Values.spec.destination.server }}

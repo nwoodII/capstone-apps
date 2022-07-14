@@ -14,3 +14,7 @@ spec:
       repoURL: https://github.com/aws-samples/aws-xray-kubernetes.git
       targetRevision: HEAD
       path: demo-app
+    djApp:
+      repoURL: https://github.com/aws-samples/aws-xray-kubernetes.git
+      targetRevision: HEAD
+      path: examples/apps/djapp/2_meshed_application     

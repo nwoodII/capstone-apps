@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: prod
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: prod
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.djApp.repoURL }}
+    targetRevision: {{ .Values.spec.apps.djApp.targetRevision }}
+    path: {{ .Values.spec.apps.djApp.path }}
+  syncPolicy:
+    automated:
+      prune: true
+    syncOptions:
+      - CreateNamespace=true

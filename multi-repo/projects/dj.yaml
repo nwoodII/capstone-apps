@@ -1,11 +1,11 @@
 apiVersion: argoproj.io/v1alpha1
 kind: AppProject
 metadata:
-  name: prod
+  name: dj
   namespace: argocd
 spec:
   destinations:
-  - namespace: prod
+  - namespace: dj
     server: https://kubernetes.default.svc
   sourceRepos:
   - git@github.com:aws/aws-app-mesh-examples.git

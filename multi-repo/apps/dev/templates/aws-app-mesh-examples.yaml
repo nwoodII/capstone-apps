@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   destination:
-    namespace: aws-app-mesh-examples
+    namespace: prod
     server: {{ .Values.spec.destination.server }}
   source:
     repoURL: {{ .Values.spec.apps.awsAppMeshExamples.repoURL }}

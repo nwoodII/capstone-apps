@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: aws-app-mesh-exampls-2
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  destination:
+    namespace: team-burnham
+    server: {{ .Values.spec.destination.server }}
+  source:
+    repoURL: {{ .Values.spec.apps.awsAppMeshExamplesTwo.repoURL }}
+    targetRevision: {{ .Values.spec.apps.awsAppMeshExamplesTwo.targetRevision }}
+    path: {{ .Values.spec.apps.awsAppMeshExamplesTwo.path }}
+  syncPolicy:
+    automated: {}
+    syncOptions:
+      - CreateNamespace=true

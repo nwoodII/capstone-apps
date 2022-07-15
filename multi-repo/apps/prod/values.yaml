@@ -1,0 +1,24 @@
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  apps:
+    blueGreen:
+      repoURL: https://github.com/nwoodII/argocd-example-apps.git
+      targetRevision: HEAD
+      path: blue-green 
+    apps:
+      repoURL: https://github.com/nwoodII/argocd-example-apps.git
+      targetRevision: HEAD
+      path: apps    
+    eksBlueprintsWorkloads:
+      repoURL: https://github.com/nwoodII/eks-blueprints-workloads.git
+      targetRevision: HEAD
+      path: envs/dev  
+    awsAppMeshExamples:
+      repoURL: https://github.com/nwoodII/aws-app-mesh-examples.git
+      targetRevision: HEAD
+      path: examples/apps/djapp/1_base_application        
+    awsAppMeshExamplesTwo:
+      repoURL: https://github.com/nwoodII/aws-app-mesh-examples.git
+      targetRevision: HEAD
+      path: examples/apps/djapp/2_meshed_application        

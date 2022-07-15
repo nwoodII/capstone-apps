@@ -15,7 +15,6 @@ spec:
     targetRevision: {{ .Values.spec.apps.eksBlueprintsWorkloads.targetRevision }}
     path: {{ .Values.spec.apps.eksBlueprintsWorkloads.path }}
   syncPolicy:
-    automated:
-      prune: true
+    automated: {}
     syncOptions:
       - CreateNamespace=true

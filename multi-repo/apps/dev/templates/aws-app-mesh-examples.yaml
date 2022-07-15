@@ -15,7 +15,6 @@ spec:
     targetRevision: {{ .Values.spec.apps.awsAppMeshExamples.targetRevision }}
     path: {{ .Values.spec.apps.awsAppMeshExamples.path }}
   syncPolicy:
-    automated:
-      prune: true
+    automated: {}
     syncOptions:
       - CreateNamespace=true
